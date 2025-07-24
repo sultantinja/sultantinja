@@ -23,6 +23,17 @@
 	text-transform:lowercase!important; 
 }
 
+/* Edit Navbar */
+
+.ftco-navbar-light {
+  top: 175px;
+}
+@media (max-width: 991.98px) {
+  .ftco-navbar-light {
+    top: 0;
+  } 
+}
+
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
