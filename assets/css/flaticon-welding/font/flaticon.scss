@@ -1,0 +1,61 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?33b97a6446d86e23089f644ce658e928") format("truetype"),
+url("./flaticon.woff?33b97a6446d86e23089f644ce658e928") format("woff"),
+url("./flaticon.woff2?33b97a6446d86e23089f644ce658e928") format("woff2"),
+url("./flaticon.eot?33b97a6446d86e23089f644ce658e928#iefix") format("embedded-opentype"),
+url("./flaticon.svg?33b97a6446d86e23089f644ce658e928#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "welding-1": "\f101",
+    "welding-2": "\f102",
+    "welding-3": "\f103",
+    "question": "\f104",
+    "information": "\f105",
+    "problem-solving": "\f106",
+    "question-1": "\f107",
+    "happy": "\f108",
+    "happy-1": "\f109",
+);
+
+.flaticon-welding-1:before {
+    content: map-get($flaticon-map, "welding-1");
+}
+.flaticon-welding-2:before {
+    content: map-get($flaticon-map, "welding-2");
+}
+.flaticon-welding-3:before {
+    content: map-get($flaticon-map, "welding-3");
+}
+.flaticon-question:before {
+    content: map-get($flaticon-map, "question");
+}
+.flaticon-information:before {
+    content: map-get($flaticon-map, "information");
+}
+.flaticon-problem-solving:before {
+    content: map-get($flaticon-map, "problem-solving");
+}
+.flaticon-question-1:before {
+    content: map-get($flaticon-map, "question-1");
+}
+.flaticon-happy:before {
+    content: map-get($flaticon-map, "happy");
+}
+.flaticon-happy-1:before {
+    content: map-get($flaticon-map, "happy-1");
+}
