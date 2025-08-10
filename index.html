@@ -67,6 +67,26 @@
         gtag('config', 'G-N15R4WZ4RT');
     </script>
 
+    <script>
+        function gtagSendEvent(url, newTab = true) {
+            var callback = function () {
+                if (typeof url === 'string') {
+                    if (newTab) {
+                        window.open(url, '_blank');
+                    } else {
+                        window.location = url;
+                    }
+                }
+            };
+            gtag('event', 'conversion_event_contact_1', {
+                'event_callback': callback,
+                'event_timeout': 2000
+            });
+            return false;
+        }
+    </script>
+
+
 </head>
 
 <body>
@@ -89,13 +109,15 @@
                     </p> -->
                     <p class="mb-0 mr-3">
                         <span class="fas fa-phone-alt"></span>
-                        <a href="tel:081263493737" title="No. Telepon">
+                        <a href="tel:081263493737" title="No. Telepon"
+                            onclick="return gtagSendEvent('tel:081263493737')">
                             <span class="text"> 081263493737 </span>
                         </a>
                     </p>
                     <p class="mb-0 mr-3">
                         <span class="fab fa-whatsapp"></span>
                         <a href="https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya.."
+                            onclick="return gtagSendEvent('https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya..')"
                             rel="nofollow noopener" target="_new" title="WhatsApp">
                             <span class="text"> 081263493737 </span>
                         </a>
@@ -536,7 +558,8 @@
                     <center class="justify-content-center">
                         <h2 class="text-primary text-bold"> Booking Sekarang, Konsultasi, Deal ! </h2>
                         <a href="https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya.."
-                            rel="nofollow noopener" target="_new" title="WhatsApp">
+                            rel="nofollow noopener" target="_new" title="WhatsApp"
+                            onclick="return gtagSendEvent('https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya..')">
                             <img src="https://sultantinjapekanbaru.com/assets/images/arrow-gif.gif" class="img-fluid">
                             <img src="https://sultantinjapekanbaru.com/assets/images/order-whatsapp.gif"
                                 class="img-fluid">
@@ -565,14 +588,15 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tel:081263493737">
+                                    <a href="tel:081263493737" onclick="return gtagSendEvent('tel:081263493737')">
                                         <span class="fas fa-phone-alt mr-3"></span>
                                         <span class="text"> 081263493737 </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya.."
-                                        rel="nofollow noopener" target="_new" title="WhatsApp">
+                                        rel="nofollow noopener" target="_new" title="WhatsApp"
+                                        onclick="return gtagSendEvent('https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya..')">
                                         <span class="fab fa-whatsapp mr-3"></span>
                                         <span class="text"> 081263493737 </span>
                                     </a>
@@ -607,7 +631,8 @@
     <!-- Floating Chat WhatsApp -->
     <a class="fixed-whatsapp"
         href="https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya.."
-        rel="nofollow noopener" target="_new" title="WhatsApp">
+        rel="nofollow noopener" target="_new" title="WhatsApp"
+        onclick="return gtagSendEvent('https://api.whatsapp.com/send?phone=6281263493737&text=Halo Admin Sultan Tinja, saya ingin bertanya..')">
         <span class="sr-only"> WhatsApp </span>
     </a>
     <!-- loader -->
@@ -635,9 +660,9 @@
     <script src="https://sultantinjapekanbaru.com/assets/js/scrollax.min.js"></script>
     <script src="https://sultantinjapekanbaru.com/assets/js/main.js"></script>
     <!-- Sharethis -->
-    <script type="text/javascript"
+    <!-- <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=5fbf3b8475b18f0012b2c298&product=inline-share-buttons"
-        async="async"></script>
+        async="async"></script> -->
 </body>
 
 </html>
